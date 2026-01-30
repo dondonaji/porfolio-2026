@@ -1,21 +1,22 @@
 "use client"
 
-import { 
-    Gamepad2, 
-    Headphones, 
-    Box, 
-    ArrowUpRight, 
-    Stethoscope, 
-    ShieldCheck, 
-    Fingerprint, 
-    Zap, 
-    Globe, 
-    Ghost, 
-    Radar 
+import {
+    Gamepad2,
+    Headphones,
+    Box,
+    ArrowUpRight,
+    Stethoscope,
+    ShieldCheck,
+    Fingerprint,
+    Zap,
+    Globe,
+    Ghost,
+    Radar
 } from "lucide-react"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
+import { SpotlightCard } from "@/components/ui/spotlight-card"
 
 const projects = [
     {
@@ -76,7 +77,7 @@ const projects = [
         link: "https://github.com/dondonaji/fortnite-stats-app"
     },
     {
-        title: "AI Strategy Radar",
+        title: "ai strategy radar",
         category: "Strategy",
         icon: Radar,
         color: "text-cyan-400",
@@ -138,7 +139,7 @@ export function ProjectsGrid() {
             <h3 className="text-sm font-bold uppercase tracking-widest text-muted-foreground/50 pl-1">
                 Portafolio & Proyectos
             </h3>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {projects.map((project, index) => (
                     <motion.a
@@ -151,7 +152,10 @@ export function ProjectsGrid() {
                         transition={{ duration: 0.3, delay: index * 0.05 }}
                         className={`block group ${project.featured ? "md:col-span-2" : ""}`}
                     >
-                        <Card className={`glass-card h-full hover:bg-white/5 transition-all duration-300 ${project.border} group-hover:border-white/30`}>
+                        <SpotlightCard
+                            className={`h-full transition-all duration-300 ${project.border} bg-black/40 backdrop-blur-xl`}
+                            spotlightColor="rgba(255, 255, 255, 0.1)"
+                        >
                             <CardContent className="p-5">
                                 <div className="flex justify-between items-start mb-4">
                                     <div className={`p-3 rounded-xl ${project.bg} ${project.color} ring-1 ring-white/10`}>
@@ -159,7 +163,7 @@ export function ProjectsGrid() {
                                     </div>
                                     <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                                 </div>
-                                
+
                                 <div className="space-y-2">
                                     <div className="flex items-center justify-between">
                                         <h4 className="font-semibold text-lg text-foreground group-hover:text-white transition-colors">
@@ -169,11 +173,11 @@ export function ProjectsGrid() {
                                             {project.category}
                                         </Badge>
                                     </div>
-                                    
+
                                     <p className="text-sm text-muted-foreground leading-relaxed">
                                         {project.description}
                                     </p>
-                                    
+
                                     <div className="flex flex-wrap gap-2 pt-2">
                                         {project.stack.map((tech, i) => (
                                             <span key={i} className="text-[10px] px-2 py-1 rounded-md bg-white/5 text-muted-foreground border border-white/5">
@@ -183,7 +187,7 @@ export function ProjectsGrid() {
                                     </div>
                                 </div>
                             </CardContent>
-                        </Card>
+                        </SpotlightCard>
                     </motion.a>
                 ))}
             </div>

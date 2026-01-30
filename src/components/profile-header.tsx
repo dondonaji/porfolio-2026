@@ -15,8 +15,8 @@ export function ProfileHeader() {
         >
             <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-30 animate-pulse"></div>
-                <Avatar className="w-24 h-24 border-2 border-background relative">
-                    <AvatarImage src="/profile-placeholder.jpg" alt="Donaji Ramírez" />
+                <Avatar className="w-24 h-24 border-2 border-background relative grayscale hover:grayscale-0 transition-all duration-500">
+                    <AvatarImage src="/dondonaji.png" alt="Donaji Ramírez" className="object-cover" />
                     <AvatarFallback className="bg-muted text-2xl font-bold">DR</AvatarFallback>
                 </Avatar>
             </div>

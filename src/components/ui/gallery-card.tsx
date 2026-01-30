@@ -1,9 +1,9 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion, HTMLMotionProps } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
-interface GalleryCardProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+interface GalleryCardProps extends HTMLMotionProps<"a"> {
     title: string
     category: string
     description: string

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-foreground flex flex-col items-center py-16 px-4 relative overflow-hidden font-sans selection:bg-purple-500/30">
+    <main className="min-h-screen bg-[#0a0a0a] text-foreground flex flex-col items-center py-24 px-4 relative overflow-hidden font-sans selection:bg-white/20">
 
       {/* Cinematic Noise Overlay */}
       <div className="fixed inset-0 z-50 pointer-events-none opacity-[0.03] mix-blend-overlay"

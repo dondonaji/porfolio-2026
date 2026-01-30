@@ -1,194 +1,95 @@
 "use client"
 
-import {
-    Gamepad2,
-    Headphones,
-    Box,
-    ArrowUpRight,
-    Stethoscope,
-    ShieldCheck,
-    Fingerprint,
-    Zap,
-    Globe,
-    Ghost,
-    Radar
-} from "lucide-react"
-import { CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
-import { SpotlightCard } from "@/components/ui/spotlight-card"
+import { GalleryCard } from "@/components/ui/gallery-card"
 
 const projects = [
     {
-        title: "VetI - SaaS",
+        title: "VetI - SaaS System",
         category: "SaaS",
-        icon: Stethoscope,
-        color: "text-emerald-400",
-        bg: "bg-emerald-400/10",
-        border: "border-emerald-400/20",
-        description: "Sistema de gestión clínica veterinaria con arquitectura multi-tenant.",
+        imageGradient: "bg-gradient-to-tr from-emerald-900 to-emerald-500",
+        description: "Sistema de gestión clínica veterinaria con arquitectura multi-tenant y pagos en tiempo real.",
         stack: ["Next.js 16", "Supabase", "Stripe"],
         link: "https://github.com/dondonaji/veti-veterinaria",
-        featured: true
-    },
-    {
-        title: "Invoice Auditor MX",
-        category: "Fintech",
-        icon: ShieldCheck,
-        color: "text-blue-400",
-        bg: "bg-blue-400/10",
-        border: "border-blue-400/20",
-        description: "Auditoría fiscal de XMLs y detección de riesgos SAT (CFDI 4.0).",
-        stack: ["XML Parsing", "Compliance", "Local Logic"],
-        link: "https://github.com/dondonaji/invoice-auditor-mx"
+        size: "large"
     },
     {
         title: "RUNWAY ZERO",
         category: "Creative",
-        icon: Zap,
-        color: "text-pink-500",
-        bg: "bg-pink-500/10",
-        border: "border-pink-500/20",
-        description: "Plataforma de crowdfunding soberano con narrativa visual inmersiva.",
+        imageGradient: "bg-gradient-to-bl from-pink-900 via-purple-900 to-black",
+        description: "Manifiesto digital y plataforma de crowdfunding soberano con narrativa visual inmersiva.",
         stack: ["Framer Motion", "High-Impact UI", "Commerce"],
         link: "https://github.com/dondonaji/RUNNAWAY2026",
-        featured: true
+        size: "large"
+    },
+    {
+        title: "Invoice Auditor",
+        category: "Fintech",
+        imageGradient: "bg-gradient-to-br from-blue-900 to-slate-800",
+        description: "Auditoría fiscal de XMLs y detección de riesgos SAT con procesamiento local seguro.",
+        stack: ["XML Parsing", "Compliance", "Local Logic"],
+        link: "https://github.com/dondonaji/invoice-auditor-mx",
+        size: "medium"
     },
     {
         title: "Asistencia IoT",
         category: "Hardware",
-        icon: Fingerprint,
-        color: "text-orange-400",
-        bg: "bg-orange-400/10",
-        border: "border-orange-400/20",
-        description: "Control de acceso empresarial con integración biométrica.",
+        imageGradient: "bg-gradient-to-tr from-orange-900 to-amber-700",
+        description: "Control de acceso empresarial con integración biométrica en tiempo real.",
         stack: ["IoT", "Biometrics", "Real-time"],
-        link: "https://github.com/dondonaji/asistencia-seguridad"
+        link: "https://github.com/dondonaji/asistencia-seguridad",
+        size: "medium"
     },
     {
         title: "Fortnite Stats",
         category: "Analytics",
-        icon: Gamepad2,
-        color: "text-purple-400",
-        bg: "bg-purple-400/10",
-        border: "border-purple-400/20",
-        description: "Dashboard de alto rendimiento para métricas de E-Sports.",
+        imageGradient: "bg-gradient-to-r from-violet-900 to-fuchsia-900",
+        description: "Dashboard de alto rendimiento para métricas de E-Sports con baja latencia.",
         stack: ["Data Viz", "Low Latency"],
-        link: "https://github.com/dondonaji/fortnite-stats-app"
+        link: "https://github.com/dondonaji/fortnite-stats-app",
+        size: "medium"
     },
     {
-        title: "ai strategy radar",
+        title: "AI Radar",
         category: "Strategy",
-        icon: Radar,
-        color: "text-cyan-400",
-        bg: "bg-cyan-400/10",
-        border: "border-cyan-400/20",
-        description: "Visualización de tendencias estratégicas de Inteligencia Artificial.",
+        imageGradient: "bg-gradient-to-tl from-cyan-900 to-blue-900",
+        description: "Visualización estratégica de tendencias de Inteligencia Artificial.",
         stack: ["React", "Strategy", "Trends"],
-        link: "https://github.com/dondonaji/Airadarestrategico"
-    },
-    {
-        title: "Órbitas Planetarias",
-        category: "Science",
-        icon: Globe,
-        color: "text-yellow-200",
-        bg: "bg-yellow-400/10",
-        border: "border-yellow-400/20",
-        description: "Simulación heliocéntrica precisa usando astronomy-engine.",
-        stack: ["Astronomy", "Math", "Canvas"],
-        link: "https://github.com/dondonaji/Orbitasplanetarias"
-    },
-    {
-        title: "Life Game RPG",
-        category: "Game",
-        icon: Ghost,
-        color: "text-indigo-400",
-        bg: "bg-indigo-400/10",
-        border: "border-indigo-400/20",
-        description: "Test de personalidad gamificado en Pixel Art.",
-        stack: ["Vanilla JS", "Pixel Art", "i18n"],
-        link: "https://github.com/dondonaji/Life-Game"
-    },
-    {
-        title: "Producción Musical",
-        category: "Art",
-        icon: Headphones,
-        color: "text-slate-400",
-        bg: "bg-white/5",
-        border: "border-white/10",
-        description: "Diseño sonoro, Ableton Live y Beatbox.",
-        stack: ["Audio", "Creative"],
-        link: "#"
-    },
-    {
-        title: "Diseño 3D",
-        category: "Design",
-        icon: Box,
-        color: "text-slate-400",
-        bg: "bg-white/5",
-        border: "border-white/10",
-        description: "Modelado orgánico y Hard Surface (Blender/ZBrush).",
-        stack: ["3D", "Visuals"],
-        link: "#"
+        link: "https://github.com/dondonaji/Airadarestrategico",
+        size: "medium"
     }
 ]
 
 export function ProjectsGrid() {
     return (
-        <div className="w-full max-w-2xl mx-auto space-y-6 mb-12">
-            <h3 className="text-sm font-bold uppercase tracking-widest text-muted-foreground/50 pl-1">
-                Portafolio & Proyectos
-            </h3>
+        <div className="w-full max-w-4xl mx-auto space-y-8 mb-16">
+            <div className="flex items-center justify-between px-2">
+                <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">
+                    Selected Works
+                </h3>
+                <span className="text-xs font-mono text-white/30">2024 — 2026</span>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {projects.map((project, index) => (
-                    <motion.a
+                    <motion.div
                         key={index}
-                        href={project.link}
-                        target={project.link.startsWith("http") ? "_blank" : "_self"}
-                        rel="noopener noreferrer"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.3, delay: index * 0.05 }}
-                        className={`block group ${project.featured ? "md:col-span-2" : ""}`}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        className={project.size === "large" ? "md:col-span-2" : ""}
                     >
-                        <SpotlightCard
-                            className={`h-full transition-all duration-300 ${project.border} bg-black/40 backdrop-blur-xl`}
-                            spotlightColor="rgba(255, 255, 255, 0.1)"
-                        >
-                            <CardContent className="p-5">
-                                <div className="flex justify-between items-start mb-4">
-                                    <div className={`p-3 rounded-xl ${project.bg} ${project.color} ring-1 ring-white/10`}>
-                                        <project.icon className="w-6 h-6" />
-                                    </div>
-                                    <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-                                </div>
-
-                                <div className="space-y-2">
-                                    <div className="flex items-center justify-between">
-                                        <h4 className="font-semibold text-lg text-foreground group-hover:text-white transition-colors">
-                                            {project.title}
-                                        </h4>
-                                        <Badge variant="outline" className={`text-[10px] uppercase tracking-wider ${project.color} border-white/10 bg-black/20`}>
-                                            {project.category}
-                                        </Badge>
-                                    </div>
-
-                                    <p className="text-sm text-muted-foreground leading-relaxed">
-                                        {project.description}
-                                    </p>
-
-                                    <div className="flex flex-wrap gap-2 pt-2">
-                                        {project.stack.map((tech, i) => (
-                                            <span key={i} className="text-[10px] px-2 py-1 rounded-md bg-white/5 text-muted-foreground border border-white/5">
-                                                {tech}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </SpotlightCard>
-                    </motion.a>
+                        <GalleryCard
+                            title={project.title}
+                            category={project.category}
+                            description={project.description}
+                            stack={project.stack}
+                            imageGradient={project.imageGradient}
+                            href={project.link}
+                            className={project.size === "large" ? "h-[400px]" : ""}
+                        />
+                    </motion.div>
                 ))}
             </div>
         </div>

@@ -1,10 +1,9 @@
-"use client"
-import React, { useRef, useState } from "react"
+import React from "react"
 import { motion } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
-interface GalleryCardProps extends React.HTMLAttributes<HTMLDivElement> {
+interface GalleryCardProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
     title: string
     category: string
     description: string

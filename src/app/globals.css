@@ -48,8 +48,10 @@
 
 :root {
   /* Swiss Pop Palette */
-  --background: 0 0% 100%; /* Stark White */
-  --foreground: 0 0% 0%; /* Pure Black */
+  --background: 40 20% 98%;
+  /* Warm Cream #FAFAF5 */
+  --foreground: 0 0% 0%;
+  /* Pure Black */
 
   --card: 0 0% 100%;
   --card-foreground: 0 0% 0%;
@@ -58,26 +60,31 @@
   --popover-foreground: 0 0% 0%;
 
   /* Vibrant Accents */
-  --primary: 18 100% 50%; /* International Orange #FF4D00 */
+  --primary: 18 100% 50%;
+  /* International Orange #FF4D00 */
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 217 91% 60%; /* Brutal Blue #3B82F6 */
+  --secondary: 217 91% 60%;
+  /* Brutal Blue #3B82F6 */
   --secondary-foreground: 0 0% 100%;
 
   --muted: 0 0% 96%;
   --muted-foreground: 0 0% 40%;
 
-  --accent: 48 96% 53%; /* Construction Yellow #FACC15 */
+  --accent: 48 96% 53%;
+  /* Construction Yellow #FACC15 */
   --accent-foreground: 0 0% 0%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 0 0% 0%; /* Pure Black Borders */
+  --border: 0 0% 0%;
+  /* Pure Black Borders */
   --input: 0 0% 0%;
   --ring: 0 0% 0%;
 
-  --radius: 0px; /* Neo-Brutalism = No Radius */
+  --radius: 0px;
+  /* Neo-Brutalism = No Radius */
 }
 
 .dark {
@@ -94,6 +101,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -103,9 +111,11 @@
   .glass {
     @apply bg-black/40 backdrop-blur-md border border-white/10;
   }
+
   .glass-card {
     @apply bg-card/50 backdrop-blur-xl border border-border/50 shadow-xl supports-[backdrop-filter]:bg-card/20;
   }
+
   .text-glow {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
   }

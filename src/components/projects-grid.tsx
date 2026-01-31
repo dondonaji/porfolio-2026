@@ -58,6 +58,15 @@ const projects = [
         stack: ["React", "Strategy"],
         link: "https://github.com/dondonaji/Airadarestrategico",
         className: "md:col-span-2"
+    },
+    {
+        title: "InstaFlow IA",
+        category: "AI Tools",
+        accentColor: "primary" as const,
+        description: "AI-powered Instagram content generator.",
+        stack: ["Gemini", "React", "Vite"],
+        link: "https://instaflow-six.vercel.app/",
+        className: "md:col-span-2"
     }
 ]
 

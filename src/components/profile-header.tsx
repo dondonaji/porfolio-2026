@@ -8,39 +8,39 @@ import { motion } from "framer-motion"
 export function ProfileHeader() {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col items-center text-center space-y-4 mb-8"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+            className="flex flex-col items-center text-center space-y-6 mb-8"
         >
             <div className="relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-30 animate-pulse"></div>
-                <Avatar className="w-24 h-24 border-2 border-background relative hover:scale-105 transition-all duration-500">
+                {/* Neo-Brutalist Avatar: Boxy or heavy border, no blur/glow */}
+                <Avatar className="w-28 h-28 border-[3px] border-black rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                     <AvatarImage src="/dondonaji.png" alt="Donaji Ramírez" className="object-cover" />
-                    <AvatarFallback className="bg-muted text-2xl font-bold">DR</AvatarFallback>
+                    <AvatarFallback className="bg-white text-black font-black text-3xl">DR</AvatarFallback>
                 </Avatar>
             </div>
 
-            <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tight">Donaji Ramírez</h1>
-                <div className="flex items-center justify-center text-muted-foreground space-x-2 text-sm">
-                    <MapPin className="w-4 h-4" />
-                    <span>CDMX</span>
-                    <span className="text-border">|</span>
-                    <span className="text-xs font-mono uppercase tracking-widest text-primary/80">Diseño • Sonido • Código</span>
+            <div className="space-y-1">
+                <h1 className="text-5xl md:text-6xl font-black tracking-tighter uppercase leading-none">
+                    Donaji <br /><span className="text-stroke-2 text-transparent" style={{ WebkitTextStroke: "2px black", color: "transparent" }}>Ramírez</span>
+                </h1>
+                <div className="flex items-center justify-center font-mono font-bold text-sm pt-2 space-x-3">
+                    <div className="flex items-center gap-1 border border-black px-2 py-0.5 bg-[var(--accent)] text-black shadow-[2px_2px_0px_0px_black]">
+                        <MapPin className="w-3 h-3" />
+                        <span>CDMX</span>
+                    </div>
+                    <span className="text-black/30 text-xs">//</span>
+                    <span className="uppercase tracking-wider text-xs">Full Stack Creative</span>
                 </div>
             </div>
 
-            <p className="max-w-xs text-muted-foreground text-sm leading-relaxed">
-                Explorando la intersección entre la tecnología creativa y la conciencia humana.
-            </p>
-
-            <div className="flex gap-2 mt-2">
-                <Badge variant="secondary" className="glass hover:bg-white/10 transition-colors cursor-default">
-                    Tech-Minimalist
+            <div className="flex gap-3 mt-2">
+                <Badge variant="outline" className="rounded-none border-2 border-black bg-white text-black font-bold hover:bg-black hover:text-white transition-colors cursor-default">
+                    TECH_MINIMALIST
                 </Badge>
-                <Badge variant="secondary" className="glass hover:bg-white/10 transition-colors cursor-default">
-                    2026 Vision
+                <Badge variant="outline" className="rounded-none border-2 border-black bg-[var(--secondary)] text-white font-bold hover:bg-black hover:text-white transition-colors cursor-default">
+                    2026_VISION
                 </Badge>
             </div>
         </motion.div>

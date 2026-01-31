@@ -2,6 +2,7 @@
 
 import { ProfileHeader } from "@/components/profile-header";
 import { ProjectsGrid } from "@/components/projects-grid";
+import { ShowreelSection } from "@/components/showreel-section";
 import { SocialLinks } from "@/components/social-links";
 import { Footer } from "@/components/footer";
 import { motion } from "framer-motion";
@@ -17,6 +18,7 @@ export default function Home() {
 
       <div className="z-10 w-full max-w-6xl mx-auto flex flex-col gap-8 md:gap-12 relative">
         <ProfileHeader />
+        <ShowreelSection />
         <ProjectsGrid />
         <SocialLinks />
         <Footer />

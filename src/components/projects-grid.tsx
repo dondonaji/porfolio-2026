@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { NeoBrutalistCard } from "@/components/ui/neobrutalist-card"
+import { CollapsibleSection } from "@/components/ui/collapsible-section"
 
 const projects = [
     {
@@ -62,42 +63,35 @@ const projects = [
 
 export function ProjectsGrid() {
     return (
-        <div className="w-full max-w-6xl mx-auto mb-20 px-4">
-            {/* Swiss Grid Header */}
-            <div className="grid grid-cols-2 md:grid-cols-4 border-b-[3px] border-black mb-8">
-                <div className="col-span-1 p-2 font-black text-xl uppercase tracking-tighter bg-black text-white">
-                    Selected Works
+        <div className="w-full max-w-6xl mx-auto mb-8 px-4">
+            <CollapsibleSection
+                title="Selected Works"
+                subtitle="// ARCHIVE_2024-2026.DIR"
+                defaultOpen={true}
+            >
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 pt-4">
+                    {projects.map((project, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.2, delay: index * 0.05 }}
+                            className={project.className}
+                        >
+                            <NeoBrutalistCard
+                                title={project.title}
+                                category={project.category}
+                                description={project.description}
+                                stack={project.stack}
+                                accentColor={project.accentColor}
+                                href={project.link}
+                                className="h-full min-h-[250px]"
+                            />
+                        </motion.div>
+                    ))}
                 </div>
-                <div className="col-span-1 md:col-span-2 p-2 font-mono text-sm border-r-[3px] border-black hidden md:block">
-                    // ARCHIVE_2024-2026.DIR
-                </div>
-                <div className="col-span-1 p-2 font-mono text-sm text-right font-bold">
-                    [INDEX: 001]
-                </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                {projects.map((project, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.2, delay: index * 0.05 }}
-                        className={project.className}
-                    >
-                        <NeoBrutalistCard
-                            title={project.title}
-                            category={project.category}
-                            description={project.description}
-                            stack={project.stack}
-                            accentColor={project.accentColor}
-                            href={project.link}
-                            className="h-full min-h-[250px]"
-                        />
-                    </motion.div>
-                ))}
-            </div>
+            </CollapsibleSection>
         </div>
     )
 }

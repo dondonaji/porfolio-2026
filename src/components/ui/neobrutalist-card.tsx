@@ -35,6 +35,11 @@ export function NeoBrutalistCard({
         <motion.a
             href={href}
             target={href.startsWith("http") ? "_blank" : "_self"}
+            whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.15, ease: "easeOut" }
+            }}
+            whileTap={{ scale: 0.98 }}
             className={`
                 block relative group overflow-hidden 
                 bg-white border-[3px] border-black 
@@ -43,6 +48,7 @@ export function NeoBrutalistCard({
                 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] 
                 hover:translate-x-[2px] hover:translate-y-[2px]
                 md:hover:translate-x-[4px] md:hover:translate-y-[4px]
+                hover:border-[var(--primary)]
                 transition-all duration-100 ease-linear
                 p-4 md:p-6 flex flex-col justify-between
                 ${className}

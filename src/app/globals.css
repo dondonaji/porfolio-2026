@@ -119,4 +119,41 @@
   .text-glow {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
   }
+
+  /* Halftone Textures */
+  .halftone-overlay {
+    position: relative;
+  }
+
+  .halftone-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, black 1px, transparent 1px);
+    background-size: 8px 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+  }
+
+  .halftone-overlay:hover::after {
+    opacity: 0.08;
+  }
+
+  /* Halftone variants by color */
+  .halftone-blue::after {
+    background-image: radial-gradient(circle, hsl(217 91% 60%) 1px, transparent 1px);
+    opacity: 0.05;
+  }
+
+  .halftone-orange::after {
+    background-image: radial-gradient(circle, hsl(18 100% 50%) 1px, transparent 1px);
+    opacity: 0.08;
+  }
+
+  .halftone-yellow::after {
+    background-image: radial-gradient(circle, hsl(48 96% 53%) 1px, transparent 1px);
+    opacity: 0.06;
+  }
 }

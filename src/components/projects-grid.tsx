@@ -4,11 +4,20 @@ import { motion } from "framer-motion"
 import { NeoBrutalistCard } from "@/components/ui/neobrutalist-card"
 import { CollapsibleSection } from "@/components/ui/collapsible-section"
 
+// Color mapping by category
+const categoryColors = {
+    saas: "secondary" as const,      // Blue
+    creative: "primary" as const,    // Orange  
+    ai: "accent" as const,           // Yellow
+    hardware: "creative" as const,   // Green (usando creative temporalmente)
+    analytics: "secondary" as const  // Purple (usando secondary temporalmente)
+}
+
 const projects = [
     {
         title: "VetI - SaaS",
         category: "SaaS",
-        accentColor: "secondary" as const, // Blue
+        accentColor: categoryColors.saas,
         description: "Multi-tenant Veterinary Clinic System.",
         stack: ["Next.js", "Supabase", "Stripe"],
         link: "https://github.com/dondonaji/veti-veterinaria",
@@ -17,7 +26,7 @@ const projects = [
     {
         title: "RUNWAY ZERO",
         category: "Creative",
-        accentColor: "creative" as const, // Pink
+        accentColor: categoryColors.creative,
         description: "Sovereign Crowdfunding Manifesto.",
         stack: ["Commerce", "Motion"],
         link: "https://github.com/dondonaji/RUNNAWAY2026",
@@ -26,7 +35,7 @@ const projects = [
     {
         title: "Invoice Audit",
         category: "Fintech",
-        accentColor: "primary" as const, // Orange
+        accentColor: categoryColors.saas,
         description: "Fiscal XML Risk Detection.",
         stack: ["XML", "Compliance"],
         link: "https://github.com/dondonaji/invoice-auditor-mx",
@@ -35,7 +44,7 @@ const projects = [
     {
         title: "Asistencia IoT",
         category: "Hardware",
-        accentColor: "accent" as const, // Yellow
+        accentColor: categoryColors.hardware,
         description: "Biometric Access Control.",
         stack: ["IoT", "Real-time"],
         link: "https://github.com/dondonaji/asistencia-seguridad",
@@ -44,7 +53,7 @@ const projects = [
     {
         title: "Fortnite Stats",
         category: "Analytics",
-        accentColor: "secondary" as const, // Blue
+        accentColor: categoryColors.analytics,
         description: "High-Performance eSports Metrics.",
         stack: ["Data Viz", "Speed"],
         link: "https://github.com/dondonaji/fortnite-stats-app",
@@ -53,7 +62,7 @@ const projects = [
     {
         title: "AI Radar",
         category: "Strategy",
-        accentColor: "creative" as const, // Pink
+        accentColor: categoryColors.ai,
         description: "Strategic AI Trend Analysis.",
         stack: ["React", "Strategy"],
         link: "https://github.com/dondonaji/Airadarestrategico",
@@ -62,7 +71,7 @@ const projects = [
     {
         title: "InstaFlow IA",
         category: "AI Tools",
-        accentColor: "primary" as const,
+        accentColor: categoryColors.ai,
         description: "AI-powered Instagram content generator.",
         stack: ["Gemini", "React", "Vite"],
         link: "https://instaflow-six.vercel.app/",

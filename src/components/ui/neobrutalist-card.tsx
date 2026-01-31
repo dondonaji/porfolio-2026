@@ -41,6 +41,7 @@ export function NeoBrutalistCard({
             }}
             whileTap={{ scale: 0.98 }}
             className={`
+                halftone-overlay
                 block relative group overflow-hidden 
                 bg-white border-[3px] border-black 
                 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] 

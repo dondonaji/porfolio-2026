@@ -15,7 +15,7 @@ export default function Home() {
         style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '60px 60px' }}>
       </div>
 
-      <div className="z-10 w-full max-w-6xl mx-auto flex flex-col gap-12 relative">
+      <div className="z-10 w-full max-w-6xl mx-auto flex flex-col gap-8 md:gap-12 relative">
         <ProfileHeader />
         <ProjectsGrid />
         <SocialLinks />

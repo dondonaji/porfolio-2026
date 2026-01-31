@@ -38,11 +38,13 @@ export function NeoBrutalistCard({
             className={`
                 block relative group overflow-hidden 
                 bg-white border-[3px] border-black 
-                shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] 
+                shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] 
+                md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]
                 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] 
-                hover:translate-x-[4px] hover:translate-y-[4px]
+                hover:translate-x-[2px] hover:translate-y-[2px]
+                md:hover:translate-x-[4px] md:hover:translate-y-[4px]
                 transition-all duration-100 ease-linear
-                p-6 flex flex-col justify-between
+                p-4 md:p-6 flex flex-col justify-between
                 ${className}
             `}
             {...props}
@@ -61,7 +63,7 @@ export function NeoBrutalistCard({
 
             {/* Content */}
             <div className="space-y-4">
-                <h3 className="text-3xl font-black text-black leading-none uppercase tracking-tighter">
+                <h3 className="text-2xl md:text-3xl font-black text-black leading-none uppercase tracking-tighter">
                     {title}
                 </h3>
 

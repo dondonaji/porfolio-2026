@@ -131,29 +131,25 @@
     inset: 0;
     background-image: radial-gradient(circle, black 1px, transparent 1px);
     background-size: 8px 8px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    opacity: 0.03;
+    /* Always visible at 3% */
     pointer-events: none;
     mix-blend-mode: multiply;
-  }
-
-  .halftone-overlay:hover::after {
-    opacity: 0.08;
   }
 
   /* Halftone variants by color */
   .halftone-blue::after {
     background-image: radial-gradient(circle, hsl(217 91% 60%) 1px, transparent 1px);
-    opacity: 0.05;
+    opacity: 0.04;
   }
 
   .halftone-orange::after {
     background-image: radial-gradient(circle, hsl(18 100% 50%) 1px, transparent 1px);
-    opacity: 0.08;
+    opacity: 0.04;
   }
 
   .halftone-yellow::after {
     background-image: radial-gradient(circle, hsl(48 96% 53%) 1px, transparent 1px);
-    opacity: 0.06;
+    opacity: 0.03;
   }
 }

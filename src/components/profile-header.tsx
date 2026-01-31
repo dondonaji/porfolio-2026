@@ -16,7 +16,7 @@ export function ProfileHeader() {
             <div className="relative">
                 {/* Neo-Brutalist Avatar: Boxy or heavy border, no blur/glow */}
                 <Avatar className="w-28 h-28 border-[3px] border-black rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <AvatarImage src="/dondonaji.png" alt="Donaji Ramírez" className="object-cover" />
+                    <AvatarImage src="/profile-2026.png" alt="Donaji Ramírez" className="object-cover" />
                     <AvatarFallback className="bg-white text-black font-black text-3xl">DR</AvatarFallback>
                 </Avatar>
             </div>

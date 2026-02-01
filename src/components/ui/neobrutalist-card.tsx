@@ -74,13 +74,32 @@ export function NeoBrutalistCard({
                 <ArrowUpRight className="w-8 h-8 text-black stroke-[3px]" />
             </div>
 
-            {/* Project Icon - Composed SVGs */}
+            {/* 
+                🎨 ICONO COMPUESTO DEL PROYECTO
+                
+                UBICACIÓN SVG: /components/project-icon.tsx
+                CONFIGURACIÓN: /lib/project-icons-config.ts
+                
+                ✨ ANIMACIONES (Framer Motion):
+                - Primary icon: scale 0→1 + rotate -180°→0° (0.5s, backOut)
+                - Secondary icons: fade + scale con delay escalonado (0.2s base + 0.1s incremental)
+                
+                📐 COMPOSICIÓN:
+                - Si iconKey existe en projectIconsConfig, renderiza ProjectIcon
+                - Primero destructura: [Primario, ...secundarios]
+                - Primario va al centro, secundarios en esquinas (top-right, bottom-right, etc.)
+                
+                🔄 PARA MODIFICAR:
+                1. Edita /lib/project-icons-config.ts para cambiar iconos/colores
+                2. Importa nuevos iconos desde "lucide-react" si es necesario
+                3. El componente ProjectIcon maneja toda la animación automáticamente
+            */}
             {iconKey && projectIconsConfig[iconKey] && (
                 <div className="flex justify-center mb-6">
                     <ProjectIcon
                         icons={projectIconsConfig[iconKey].icons}
                         colors={projectIconsConfig[iconKey].colors}
-                        size="md"
+                        size="md"  // Opciones: "sm" | "md" | "lg"
                     />
                 </div>
             )}

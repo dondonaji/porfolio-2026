@@ -8,7 +8,7 @@ export function Footer() {
                     ─────────────────────────────────────
                 </div>
                 <div className="font-black text-sm uppercase tracking-wider">
-                    Consciousness is the new luxury
+                    Todavía no hay frase mai
                 </div>
                 <div className="text-gray-600">
                     NEXT.JS • TAILWIND • GEMINI AI

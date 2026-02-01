@@ -2,6 +2,7 @@
 import React from "react"
 import { motion, HTMLMotionProps } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
+import { ProjectIconKey } from "@/lib/project-icons-config"
 
 interface NeoBrutalistCardProps extends HTMLMotionProps<"a"> {
     title: string
@@ -10,7 +11,11 @@ interface NeoBrutalistCardProps extends HTMLMotionProps<"a"> {
     stack: string[]
     accentColor: "primary" | "secondary" | "accent" | "creative"
     href: string
+    iconKey?: ProjectIconKey
 }
+
+import { ProjectIcon } from "@/components/project-icon"
+import { projectIconsConfig } from "@/lib/project-icons-config"
 
 export function NeoBrutalistCard({
     title,
@@ -20,6 +25,7 @@ export function NeoBrutalistCard({
     accentColor,
     href,
     className = "",
+    iconKey,
     ...props
 }: NeoBrutalistCardProps) {
 
@@ -67,6 +73,17 @@ export function NeoBrutalistCard({
                 </span>
                 <ArrowUpRight className="w-8 h-8 text-black stroke-[3px]" />
             </div>
+
+            {/* Project Icon - Composed SVGs */}
+            {iconKey && projectIconsConfig[iconKey] && (
+                <div className="flex justify-center mb-6">
+                    <ProjectIcon
+                        icons={projectIconsConfig[iconKey].icons}
+                        colors={projectIconsConfig[iconKey].colors}
+                        size="md"
+                    />
+                </div>
+            )}
 
             {/* Content */}
             <div className="space-y-4">

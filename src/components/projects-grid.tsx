@@ -23,7 +23,8 @@ const projects = [
         stack: ["Gemini AI", "React", "Vite"],
         link: "https://instaflow-six.vercel.app/",
         className: "md:col-span-2 md:row-span-2",
-        featured: true
+        featured: true,
+        iconKey: "instaflow" as const
     },
     // Regular projects
     {
@@ -33,7 +34,8 @@ const projects = [
         description: "Sistema multi-tenant para clínicas veterinarias.",
         stack: ["Next.js", "Supabase", "Stripe"],
         link: "https://github.com/dondonaji/veti-veterinaria",
-        className: "md:col-span-1"
+        className: "md:col-span-1",
+        iconKey: "veti" as const
     },
     {
         title: "Soberanía Creativa",
@@ -42,7 +44,8 @@ const projects = [
         description: "Manifiesto de crowdfunding soberano.",
         stack: ["Commerce", "Motion"],
         link: "https://github.com/dondonaji/RUNNAWAY2026",
-        className: "md:col-span-1"
+        className: "md:col-span-1",
+        iconKey: "soberania" as const
     },
     {
         title: "Invoice Audit",
@@ -51,7 +54,8 @@ const projects = [
         description: "Detección de riesgos fiscales en XML.",
         stack: ["XML", "Compliance"],
         link: "https://github.com/dondonaji/invoice-auditor-mx",
-        className: "md:col-span-1"
+        className: "md:col-span-1",
+        iconKey: "invoice" as const
     },
     {
         title: "Asistencia IoT",
@@ -60,7 +64,8 @@ const projects = [
         description: "Control de acceso biométrico.",
         stack: ["IoT", "Real-time"],
         link: "https://github.com/dondonaji/asistencia-seguridad",
-        className: "md:col-span-1"
+        className: "md:col-span-1",
+        iconKey: "asistencia" as const
     },
     {
         title: "Fortnite Stats",
@@ -69,7 +74,8 @@ const projects = [
         description: "Métricas de alto rendimiento para eSports.",
         stack: ["Data Viz", "Speed"],
         link: "https://github.com/dondonaji/fortnite-stats-app",
-        className: "md:col-span-1"
+        className: "md:col-span-1",
+        iconKey: "fortnite" as const
     },
     {
         title: "AI Radar",
@@ -78,7 +84,8 @@ const projects = [
         description: "Análisis estratégico de tendencias en IA.",
         stack: ["React", "Strategy"],
         link: "https://github.com/dondonaji/Airadarestrategico",
-        className: "md:col-span-2"
+        className: "md:col-span-2",
+        iconKey: "radar" as const
     }
 ]
 
@@ -107,6 +114,7 @@ export function ProjectsGrid() {
                                 stack={project.stack}
                                 accentColor={project.accentColor}
                                 href={project.link}
+                                iconKey={project.iconKey}
                                 className="h-full min-h-[250px]"
                             />
                         </motion.div>

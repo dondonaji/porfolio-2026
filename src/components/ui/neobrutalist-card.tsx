@@ -12,6 +12,7 @@ interface NeoBrutalistCardProps extends HTMLMotionProps<"a"> {
     accentColor: "primary" | "secondary" | "accent" | "creative"
     href: string
     iconKey?: ProjectIconKey
+    iconSize?: "sm" | "md" | "lg"
 }
 
 import { ProjectIcon } from "@/components/project-icon"
@@ -26,8 +27,24 @@ export function NeoBrutalistCard({
     href,
     className = "",
     iconKey,
+    iconSize = "md", // Default size
     ...props
 }: NeoBrutalistCardProps) {
+
+    // ... (rest of code)
+
+    {/* Project Icon - Composed SVGs */ }
+    {
+        iconKey && projectIconsConfig[iconKey] && (
+            <div className="flex justify-center mb-6">
+                <ProjectIcon
+                    icons={projectIconsConfig[iconKey].icons}
+                    colors={projectIconsConfig[iconKey].colors}
+                    size={iconSize}
+                />
+            </div>
+        )
+    }
 
     // Convert generic accent names to actual tailwind classes for the "Chip" background
     const accentBg = {

@@ -115,6 +115,7 @@ export function ProjectsGrid() {
                                 accentColor={project.accentColor}
                                 href={project.link}
                                 iconKey={project.iconKey}
+                                iconSize={project.featured ? "lg" : "md"} // Larger icons for featured projects
                                 className="h-full min-h-[250px]"
                             />
                         </motion.div>

@@ -44,7 +44,7 @@ export function ProjectIcon({ icons, colors = [], size = "md" }: ProjectIconProp
 
     // 🎯 ESTRATEGIA DE LAYOUT:
     // Primer icono = Hero (centro)
-    // Resto = Satélites (esquinas: top-right, bottom-right, top-left, bottom-left)
+    // Resto = Satélites ( agrupados más cerca para mejor composición)
     const [PrimaryIcon, ...secondaryIcons] = icons
     const primaryColor = colors[0] || "#000"
 
@@ -59,28 +59,30 @@ export function ProjectIcon({ icons, colors = [], size = "md" }: ProjectIconProp
                     duration: 0.5,
                     ease: "backOut"  // Efecto "spring-like" sin usar springs
                 }}
+                className="z-10 relative" // Ensure primary is on top or centered properly
             >
                 <PrimaryIcon
                     className={sizes.primary}
                     style={{ color: primaryColor }}
-                    strokeWidth={2}
+                    strokeWidth={1.5} // slightly thinner for elegance in large sizes
                 />
             </motion.div>
 
-            {/* 💫 ICONOS SECUNDARIOS - Aparecen en esquinas con stagger */}
+            {/* 💫 ICONOS SECUNDARIOS - Aparecen en esquinas pero más agrupados */}
             {secondaryIcons.map((Icon, i) => {
-                // Posiciones en las 4 esquinas
+                // Posiciones ajustadas para ser más "sticker group" (menos dispersas)
+                // Usamos porcentajes o valores mas cercanos al centro
                 const positions = [
-                    "absolute -top-1 -right-1",   // Top derecha
-                    "absolute -bottom-1 -right-1", // Bottom derecha
-                    "absolute -top-1 -left-1",    // Top izquierda
-                    "absolute -bottom-1 -left-1"   // Bottom izquierda
+                    "absolute top-0 right-0 translate-x-[10%] -translate-y-[10%]",   // Top derecha
+                    "absolute bottom-0 left-0 -translate-x-[10%] translate-y-[10%]", // Bottom izquierda (diagonal opuesta)
+                    "absolute bottom-0 right-0 translate-x-[10%] translate-y-[10%]", // Bottom derecha
+                    "absolute top-0 left-0 -translate-x-[10%] -translate-y-[10%]"    // Top izquierda
                 ]
 
                 return (
                     <motion.div
                         key={i}
-                        className={positions[i]}
+                        className={`${positions[i]} z-0`}
                         // Animación de fade + scale con delay escalonado
                         initial={{ scale: 0, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
@@ -92,7 +94,7 @@ export function ProjectIcon({ icons, colors = [], size = "md" }: ProjectIconProp
                         <Icon
                             className={sizes.secondary}
                             style={{ color: colors[i + 1] || "#666" }}
-                            strokeWidth={2.5}  // Stroke más grueso para iconos pequeños
+                            strokeWidth={2}
                         />
                     </motion.div>
                 )

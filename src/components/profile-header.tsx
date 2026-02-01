@@ -1,6 +1,6 @@
 "use client"
 
-import { MapPin } from "lucide-react"
+import { MapPin, Github, Linkedin, Mail, Code2 } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
@@ -14,11 +14,17 @@ export function ProfileHeader() {
             className="flex flex-col items-center text-center space-y-6 mb-8"
         >
             <div className="relative">
-                {/* Neo-Brutalist Avatar: Boxy or heavy border, no blur/glow */}
-                <Avatar className="w-28 h-28 border-[3px] border-black rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <AvatarImage src="/profile-2026.png" alt="Donaji Ramírez" className="object-cover" />
-                    <AvatarFallback className="bg-white text-black font-black text-3xl">DR</AvatarFallback>
-                </Avatar>
+                {/* Neo-Brutalist Avatar: 2-frame animation effect */}
+                <motion.div
+                    initial={{ scale: 0.66 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.15, ease: "linear" }}
+                >
+                    <Avatar className="w-28 h-28 border-[3px] border-black rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                        <AvatarImage src="/profile-2026.png" alt="Donaji Ramírez" className="object-cover" />
+                        <AvatarFallback className="bg-white text-black font-black text-3xl">DR</AvatarFallback>
+                    </Avatar>
+                </motion.div>
             </div>
 
             <div className="space-y-1">
@@ -27,12 +33,18 @@ export function ProfileHeader() {
                     <span style={{ letterSpacing: '0.38em' }}>Donaji</span> <br /><span className="text-stroke-2 text-transparent" style={{ WebkitTextStroke: "3px black", color: "transparent" }}>Ramírez</span>
                 </h1>
                 <div className="flex flex-wrap items-center justify-center font-mono font-bold text-xs md:text-sm pt-2 gap-2 md:gap-3">
-                    <div className="flex items-center gap-1 border border-black px-2 py-0.5 bg-[var(--accent)] text-black shadow-[2px_2px_0px_0px_black]">
+                    {/* Modern Editorial Badges */}
+                    <div className="flex items-center gap-1 border-2 border-black px-3 py-1 bg-white text-black">
                         <MapPin className="w-3 h-3" />
-                        <span>CDMX</span>
+                        <span className="tracking-wide">CDMX</span>
                     </div>
-                    <span className="text-black/30 text-xs hidden sm:inline">//</span>
-                    <span className="uppercase tracking-wider text-[10px] md:text-xs">Full Stack Creative</span>
+                    <div className="flex items-center gap-1 border-2 border-black px-3 py-1 bg-[var(--accent)] text-black">
+                        <Code2 className="w-3 h-3" />
+                        <span className="tracking-wide">FULL STACK</span>
+                    </div>
+                    <div className="border-2 border-black px-3 py-1 bg-[var(--primary)] text-white">
+                        <span className="tracking-wide">2026 VISION</span>
+                    </div>
                 </div>
             </div>
 

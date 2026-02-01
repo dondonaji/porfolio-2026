@@ -16,12 +16,12 @@ const categoryColors = {
 const projects = [
     // FEATURED PROJECT (2x2)
     {
-        title: "Soberanía Creativa",
-        category: "Creative Manifesto",
-        accentColor: categoryColors.creative,
-        description: "Manifiesto de crowdfunding soberano y herramientas de contenido con IA.",
-        stack: ["Commerce", "Gemini AI", "Motion"],
-        link: "https://github.com/dondonaji/RUNNAWAY2026",
+        title: "InstaFlow IA",
+        category: "AI Tools",
+        accentColor: categoryColors.ai,
+        description: "Generador de contenido para Instagram potenciado con IA.",
+        stack: ["Gemini AI", "React", "Vite"],
+        link: "https://instaflow-six.vercel.app/",
         className: "md:col-span-2 md:row-span-2",
         featured: true
     },
@@ -33,6 +33,15 @@ const projects = [
         description: "Sistema multi-tenant para clínicas veterinarias.",
         stack: ["Next.js", "Supabase", "Stripe"],
         link: "https://github.com/dondonaji/veti-veterinaria",
+        className: "md:col-span-1"
+    },
+    {
+        title: "Soberanía Creativa",
+        category: "Creative Manifesto",
+        accentColor: categoryColors.creative,
+        description: "Manifiesto de crowdfunding soberano.",
+        stack: ["Commerce", "Motion"],
+        link: "https://github.com/dondonaji/RUNNAWAY2026",
         className: "md:col-span-1"
     },
     {

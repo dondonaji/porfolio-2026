@@ -1367,73 +1367,86 @@ export const CuratorialCmsDrawer: React.FC<CuratorialCmsDrawerProps> = ({
               </div>
             </div>
 
-            {/* Section 2: 1-Click Direct GitHub -> Vercel Publish (Optional) */}
-            <div className="p-4 bg-white/5 border border-white/15 space-y-3">
+            {/* Section 2: 1-Click Direct Publish to Vercel */}
+            <div className="p-4 bg-white/6 border border-emerald-400/40 space-y-3.5">
               <div className="flex items-center justify-between">
-                <span className="text-[11px] font-mono-tabular uppercase tracking-[0.16em] text-white/75">
-                  B. Publicar vía GitHub API (Opcional)
+                <span className="text-xs font-mono-tabular uppercase tracking-[0.16em] text-emerald-300 font-bold flex items-center gap-1.5">
+                  <span>🚀</span> Publicar en Vivo a Vercel
                 </span>
-                <span className="text-[10px] font-mono-tabular text-white/40 border border-white/15 px-1.5 py-0.5">
-                  Opcional
+                <span className="text-[10px] font-mono-tabular text-emerald-300 bg-emerald-950/60 border border-emerald-400/40 px-2 py-0.5">
+                  Conectado · dondonaji/porfolio-2026
                 </span>
               </div>
-              <p className="text-xs text-white/50 leading-relaxed">
-                Solo si deseas automatizar commits remotos desde el navegador sin usar tu terminal.
+              <p className="text-xs text-white/70 leading-relaxed font-sans">
+                Guarda automáticamente todas tus fotos nuevas y cambios editoriales directamente en tu sitio público en vivo sin tocar código ni abrir terminales.
               </p>
 
-              <div className="space-y-2.5">
-                <input
-                  type="text"
-                  value={ghConfig.repo}
-                  onChange={(e) =>
-                    setGhConfig({ ...ghConfig, repo: e.target.value })
-                  }
-                  placeholder="Repositorio (ej. dondonaji/portafolio)"
-                  className="w-full px-3 py-1.5 bg-white/8 border border-white/20 text-xs font-mono-tabular text-white"
-                />
-                <div className="grid grid-cols-3 gap-2">
+              <button
+                type="button"
+                disabled={isPublishing}
+                onClick={handlePublishToGitHub}
+                className="w-full py-3 bg-[#F6F5F2] text-[#111110] text-xs font-mono-tabular font-bold hover:bg-white disabled:opacity-50 cursor-pointer shadow-lg transition-all flex items-center justify-center gap-2"
+              >
+                {isPublishing ? (
+                  <>
+                    <span className="inline-block w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
+                    <span>Publicando y actualizando Vercel en vivo...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>⚡ Publicar cambios a Vercel ahora (1 Clic)</span>
+                  </>
+                )}
+              </button>
+
+              {publishStatus && (
+                <div className="p-2.5 bg-emerald-950/50 border border-emerald-400/40 text-emerald-300 text-xs font-mono-tabular leading-relaxed">
+                  ✓ {publishStatus}
+                </div>
+              )}
+              {publishError && (
+                <div className="p-2.5 bg-red-950/50 border border-red-400/40 text-red-300 text-xs font-mono-tabular leading-relaxed">
+                  ✕ {publishError}
+                </div>
+              )}
+
+              {/* Advanced folded settings */}
+              <details className="pt-1 text-[11px] font-mono-tabular text-white/50 cursor-pointer">
+                <summary className="hover:text-white/80 transition-colors">
+                  ⚙ Configuración de conexión (ya configurada)
+                </summary>
+                <div className="space-y-2 pt-2.5">
                   <input
                     type="text"
-                    value={ghConfig.branch}
+                    value={ghConfig.repo}
                     onChange={(e) =>
-                      setGhConfig({ ...ghConfig, branch: e.target.value })
+                      setGhConfig({ ...ghConfig, repo: e.target.value })
                     }
-                    placeholder="Rama (main)"
-                    className="col-span-1 px-3 py-1.5 bg-white/8 border border-white/20 text-xs font-mono-tabular text-white"
+                    placeholder="Repositorio (ej. dondonaji/porfolio-2026)"
+                    className="w-full px-3 py-1.5 bg-white/8 border border-white/20 text-xs font-mono-tabular text-white"
                   />
-                  <input
-                    type="password"
-                    value={ghConfig.token}
-                    onChange={(e) =>
-                      setGhConfig({ ...ghConfig, token: e.target.value })
-                    }
-                    placeholder="GitHub Personal Access Token"
-                    className="col-span-2 px-3 py-1.5 bg-white/8 border border-white/20 text-xs font-mono-tabular text-white"
-                  />
+                  <div className="grid grid-cols-3 gap-2">
+                    <input
+                      type="text"
+                      value={ghConfig.branch}
+                      onChange={(e) =>
+                        setGhConfig({ ...ghConfig, branch: e.target.value })
+                      }
+                      placeholder="Rama (main)"
+                      className="col-span-1 px-3 py-1.5 bg-white/8 border border-white/20 text-xs font-mono-tabular text-white"
+                    />
+                    <input
+                      type="password"
+                      value={ghConfig.token}
+                      onChange={(e) =>
+                        setGhConfig({ ...ghConfig, token: e.target.value })
+                      }
+                      placeholder="Token de GitHub"
+                      className="col-span-2 px-3 py-1.5 bg-white/8 border border-white/20 text-xs font-mono-tabular text-white"
+                    />
+                  </div>
                 </div>
-
-                <button
-                  type="button"
-                  disabled={isPublishing}
-                  onClick={handlePublishToGitHub}
-                  className="w-full py-2.5 bg-[#F6F5F2] text-[#111110] text-xs font-mono-tabular font-medium hover:bg-white disabled:opacity-50 cursor-pointer"
-                >
-                  {isPublishing
-                    ? 'Publicando en GitHub → Vercel...'
-                    : 'Publicar cambios a Vercel ahora'}
-                </button>
-
-                {publishStatus && (
-                  <p className="text-[11px] font-mono-tabular text-emerald-300">
-                    {publishStatus}
-                  </p>
-                )}
-                {publishError && (
-                  <p className="text-[11px] font-mono-tabular text-red-300">
-                    {publishError}
-                  </p>
-                )}
-              </div>
+              </details>
             </div>
 
             {/* Section 3: Manual File Export for Repo */}

@@ -349,12 +349,22 @@ export const PORTFOLIO_CHAPTERS: PortfolioChapter[] = ${JSON.stringify(
 }
 
 export function loadSavedGitHubConfig(): GitHubPublishConfig {
+  const fallback: GitHubPublishConfig = {
+    repo: 'dondonaji/porfolio-2026',
+    branch: 'main',
+    token: '',
+  };
   try {
     const raw = localStorage.getItem(GH_CONFIG_KEY);
-    if (!raw) return { repo: '', branch: 'main', token: '' };
-    return JSON.parse(raw) as GitHubPublishConfig;
+    if (!raw) return fallback;
+    const parsed = JSON.parse(raw) as Partial<GitHubPublishConfig>;
+    return {
+      repo: parsed.repo || fallback.repo,
+      branch: parsed.branch || fallback.branch,
+      token: parsed.token || fallback.token,
+    };
   } catch {
-    return { repo: '', branch: 'main', token: '' };
+    return fallback;
   }
 }
 

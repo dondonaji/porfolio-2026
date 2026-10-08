@@ -1,0 +1,6 @@
+{
+  "name": "Atelier Visual — Portafolio de Fotografía y Entorno Mixto 2D/3D",
+  "description": "Portafolio minimalista hipertextual e instalación espacial 2D/3D para artista visual, con galería de wireframes editoriales inspirada en archivos de moda y enlace a Vimeo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

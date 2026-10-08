@@ -1,0 +1,390 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-08T22:34:59.251Z",
+  "artistProfile": {
+    "logoMark": "DONAJI RAMIREZ",
+    "role": "Artista Visual",
+    "cities": "Ciudad de México",
+    "email": "eldonaji@gmail.com",
+    "instagram": "@dondonaji",
+    "bioHeadline": "Donaji Ramírez (sí, él: por eso «el» Donaji y «Don» Donaji) es fotógrafo, realizador de video y artista visual en México.",
+    "bioParagraph2": "Su cámara se mueve con la misma naturalidad entre el silencio arquitectónico de la fotografía fija y el registro crudo de la escena musical en Ciudad de México. Detrás de la lente y el montaje de proyectos como el documental «Bandemia: Lo más chingón del rumbo» (con Mengers, Unperro andaluz y Demencia infantil en el canal de Genesis), la serie Organic Cypher y sesiones en vivo de Pirámide Zulú (Santa Calavera, De todas las formas, Sur 81), o piezas como «Música para limpiar la casa endemoniadamente», su trabajo busca siempre que el ritmo y el encuadre sostengan la escena sin artificios.",
+    "bioWinkEnabled": true,
+    "bioWinkTitle": "Lo que internet dice que soy (vs. la realidad)",
+    "bioWinkSubtitle": "Arqueología digital de buscar «Donaji Ramirez» y «eldonaji» en la red.",
+    "bioWinkItems": [
+      {
+        "label": "01 · La princesa y el artículo masculino",
+        "text": "Si buscas «Donají» a secas, Google jurará que soy una princesa zapoteca de Oaxaca del siglo XVI. De ahí la necesidad vital de firmar como @eldonaji o @dondonaji. Sobre los homónimos es verdad: la competencia en el buscador es extraña, pero al menos no me llamo Juan."
+      },
+      {
+        "label": "02 · De la Bandemia y el Cypher al cubo blanco",
+        "text": "Sí está indexado: de los 8 minutos con 36 segundos de «Bandemia: Lo más chingón del rumbo» (Mengers, Unperro andaluz y Demencia infantil) y «Música para limpiar la casa endemoniadamente» en el canal de Genesis, a los Organic Cyphers de Pirámide Zulú, antes de aterrizar en la calma de esta galería."
+      },
+      {
+        "label": "03 · Homónimos no autorizados",
+        "text": "Para efectos legales y curatoriales: tampoco soy el restaurante oaxaqueño con distinción Michelin en San Francisco, ni la fábrica de calzado en Guanajuato, ni he pisado España jamás."
+      }
+    ]
+  },
+  "chapters": [
+    {
+      "id": "chapter-00-vimeo",
+      "index": "00",
+      "kind": "vimeo",
+      "title": "Tiempo Suspendido",
+      "narrativeLine": "Antes de la fijeza, la luz se desplaza en silencio.",
+      "year": "2026",
+      "location": "Vimeo",
+      "coverPhoto": "/assets/color_series_03_atlantic_dusk_1791479315418-DOFNfHBw.jpg",
+      "coverAspect": "16:9",
+      "vimeoId": "76979871",
+      "photos": []
+    },
+    {
+      "id": "series-01",
+      "index": "01",
+      "kind": "photo",
+      "title": "Silencio Mineral",
+      "narrativeLine": "El peso del muro ocre detiene la primera sombra del día.",
+      "year": "2026",
+      "location": "Ciudad de México",
+      "coverPhoto": "/assets/color_series_03_atlantic_dusk_1791479315418-DOFNfHBw.jpg",
+      "coverAspect": "16:9",
+      "photos": [
+        {
+          "id": "01-1",
+          "code": "01.1",
+          "title": "Pabellón Norte II",
+          "aspectRatio": "16:9",
+          "src": "/assets/color_series_03_atlantic_dusk_1791479315418-DOFNfHBw.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "01-2",
+          "code": "01.2",
+          "title": "Umbral III",
+          "aspectRatio": "3:4",
+          "src": "/assets/color_series_04_emerald_courtyard_1791479345480-BbJkxFfy.jpg",
+          "cropPosition": "center center",
+          "originalAspectRatio": "3:4"
+        },
+        {
+          "id": "01-3",
+          "code": "01.3",
+          "title": "Corte Cenital IV",
+          "aspectRatio": "1:1",
+          "src": "/assets/color_series_05_amber_refraction_1791479354264-BNpp3lNK.jpg",
+          "cropPosition": "center center",
+          "originalAspectRatio": "1:1"
+        },
+        {
+          "id": "01-4",
+          "code": "01.4",
+          "title": "Muro de Sombra V",
+          "aspectRatio": "4:3",
+          "src": "/assets/color_series_02_botanical_light_1791479304527-DHa1LYJ1.jpg",
+          "cropPosition": "center center",
+          "originalAspectRatio": "4:3"
+        },
+        {
+          "id": "01-5",
+          "code": "01.5",
+          "title": "DON04539",
+          "aspectRatio": "3:4",
+          "originalAspectRatio": "3:4",
+          "src": "/obras/don04539.jpg",
+          "cropPosition": "center center"
+        }
+      ]
+    },
+    {
+      "id": "series-02",
+      "index": "02",
+      "kind": "photo",
+      "title": "Geometría del Pliegue",
+      "narrativeLine": "La tela guarda la memoria exacta del gesto que la habitó.",
+      "year": "2025",
+      "location": "Oaxaca",
+      "coverPhoto": "/assets/color_series_02_botanical_light_1791479304527-DHa1LYJ1.jpg",
+      "coverAspect": "4:3",
+      "photos": [
+        {
+          "id": "02-1",
+          "code": "02.1",
+          "title": "Caída I",
+          "aspectRatio": "4:3",
+          "src": "/assets/color_series_02_botanical_light_1791479304527-DHa1LYJ1.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "02-2",
+          "code": "02.2",
+          "title": "Tacto sobre Piedra II",
+          "aspectRatio": "3:4",
+          "src": "/assets/color_series_01_terracotta_1791479293420-DRdwnM87.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "02-3",
+          "code": "02.3",
+          "title": "Contraluz III",
+          "aspectRatio": "3:4",
+          "src": "/assets/color_series_04_emerald_courtyard_1791479345480-BbJkxFfy.jpg",
+          "cropPosition": "center 25%"
+        },
+        {
+          "id": "02-4",
+          "code": "02.4",
+          "title": "Trama Orgánica IV",
+          "aspectRatio": "1:1",
+          "src": "/assets/color_series_05_amber_refraction_1791479354264-BNpp3lNK.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "02-5",
+          "code": "02.5",
+          "title": "Plinto y Lino V",
+          "aspectRatio": "16:9",
+          "src": "/assets/color_series_03_atlantic_dusk_1791479315418-DOFNfHBw.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "02-6",
+          "code": "02.6",
+          "title": "Gesto Detenido VI",
+          "aspectRatio": "4:3",
+          "src": "/assets/color_series_02_botanical_light_1791479304527-DHa1LYJ1.jpg",
+          "cropPosition": "left center"
+        },
+        {
+          "id": "02-7",
+          "code": "02.7",
+          "title": "Tensión Vertical VII",
+          "aspectRatio": "3:4",
+          "src": "/assets/color_series_01_terracotta_1791479293420-DRdwnM87.jpg",
+          "cropPosition": "center 35%"
+        },
+        {
+          "id": "02-8",
+          "code": "02.8",
+          "title": "Cierre de Pliegue VIII",
+          "aspectRatio": "1:1",
+          "src": "/assets/color_series_05_amber_refraction_1791479354264-BNpp3lNK.jpg",
+          "cropPosition": "center 35%"
+        }
+      ]
+    },
+    {
+      "id": "series-03",
+      "index": "03",
+      "kind": "photo",
+      "title": "Horizonte Suspendido",
+      "narrativeLine": "Donde termina la piedra cobriza, la bruma borra toda escala.",
+      "year": "2025",
+      "location": "Baja California",
+      "coverPhoto": "/assets/color_series_03_atlantic_dusk_1791479315418-DOFNfHBw.jpg",
+      "coverAspect": "16:9",
+      "photos": [
+        {
+          "id": "03-1",
+          "code": "03.1",
+          "title": "Marea Baja I",
+          "aspectRatio": "16:9",
+          "src": "/assets/color_series_03_atlantic_dusk_1791479315418-DOFNfHBw.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "03-2",
+          "code": "03.2",
+          "title": "Costa Basáltica II",
+          "aspectRatio": "3:4",
+          "src": "/assets/color_series_01_terracotta_1791479293420-DRdwnM87.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "03-3",
+          "code": "03.3",
+          "title": "Bruma del Pacífico III",
+          "aspectRatio": "4:3",
+          "src": "/assets/color_series_02_botanical_light_1791479304527-DHa1LYJ1.jpg",
+          "cropPosition": "center center"
+        }
+      ]
+    },
+    {
+      "id": "series-04",
+      "index": "04",
+      "kind": "photo",
+      "title": "Brutalismo Óptico",
+      "narrativeLine": "Un corte diagonal divide el vacío en presencia y ausencia.",
+      "year": "2024",
+      "location": "Ciudad de México",
+      "coverPhoto": "/assets/color_series_04_emerald_courtyard_1791479345480-BbJkxFfy.jpg",
+      "coverAspect": "3:4",
+      "photos": [
+        {
+          "id": "04-1",
+          "code": "04.1",
+          "title": "Vector I",
+          "aspectRatio": "3:4",
+          "src": "/assets/color_series_04_emerald_courtyard_1791479345480-BbJkxFfy.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "04-2",
+          "code": "04.2",
+          "title": "Corredor II",
+          "aspectRatio": "3:4",
+          "src": "/assets/color_series_01_terracotta_1791479293420-DRdwnM87.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "04-3",
+          "code": "04.3",
+          "title": "Arista III",
+          "aspectRatio": "1:1",
+          "src": "/assets/color_series_05_amber_refraction_1791479354264-BNpp3lNK.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "04-4",
+          "code": "04.4",
+          "title": "Claustro IV",
+          "aspectRatio": "16:9",
+          "src": "/assets/color_series_03_atlantic_dusk_1791479315418-DOFNfHBw.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "04-5",
+          "code": "04.5",
+          "title": "Travertino V",
+          "aspectRatio": "4:3",
+          "src": "/assets/color_series_02_botanical_light_1791479304527-DHa1LYJ1.jpg",
+          "cropPosition": "center center"
+        }
+      ]
+    },
+    {
+      "id": "series-05",
+      "index": "05",
+      "kind": "photo",
+      "title": "Materia y Refracción",
+      "narrativeLine": "La luz atraviesa el ámbar y regresa al silencio inicial.",
+      "year": "2024",
+      "location": "Guadalajara",
+      "coverPhoto": "/assets/color_series_05_amber_refraction_1791479354264-BNpp3lNK.jpg",
+      "coverAspect": "1:1",
+      "photos": [
+        {
+          "id": "05-1",
+          "code": "05.1",
+          "title": "Plinto I",
+          "aspectRatio": "1:1",
+          "src": "/assets/color_series_05_amber_refraction_1791479354264-BNpp3lNK.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "05-2",
+          "code": "05.2",
+          "title": "Reposo II",
+          "aspectRatio": "4:3",
+          "src": "/assets/color_series_02_botanical_light_1791479304527-DHa1LYJ1.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "05-3",
+          "code": "05.3",
+          "title": "Gravedad III",
+          "aspectRatio": "3:4",
+          "src": "/assets/color_series_01_terracotta_1791479293420-DRdwnM87.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "05-4",
+          "code": "05.4",
+          "title": "Vidrio Óptico IV",
+          "aspectRatio": "3:4",
+          "src": "/assets/color_series_04_emerald_courtyard_1791479345480-BbJkxFfy.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "05-5",
+          "code": "05.5",
+          "title": "Lino y Cal V",
+          "aspectRatio": "16:9",
+          "src": "/assets/color_series_03_atlantic_dusk_1791479315418-DOFNfHBw.jpg",
+          "cropPosition": "center center"
+        },
+        {
+          "id": "05-6",
+          "code": "05.6",
+          "title": "Horizonte Mineral VI",
+          "aspectRatio": "1:1",
+          "src": "/assets/color_series_05_amber_refraction_1791479354264-BNpp3lNK.jpg",
+          "cropPosition": "center 30%"
+        },
+        {
+          "id": "05-7",
+          "code": "05.7",
+          "title": "Pabellón VII",
+          "aspectRatio": "4:3",
+          "src": "/assets/color_series_02_botanical_light_1791479304527-DHa1LYJ1.jpg",
+          "cropPosition": "right center"
+        },
+        {
+          "id": "05-8",
+          "code": "05.8",
+          "title": "Silueta en Fuga VIII",
+          "aspectRatio": "3:4",
+          "src": "/assets/color_series_01_terracotta_1791479293420-DRdwnM87.jpg",
+          "cropPosition": "center 25%"
+        },
+        {
+          "id": "05-9",
+          "code": "05.9",
+          "title": "Tacto IX",
+          "aspectRatio": "3:4",
+          "src": "/assets/color_series_04_emerald_courtyard_1791479345480-BbJkxFfy.jpg",
+          "cropPosition": "center 35%"
+        },
+        {
+          "id": "05-10",
+          "code": "05.10",
+          "title": "Bloque X",
+          "aspectRatio": "16:9",
+          "src": "/assets/color_series_03_atlantic_dusk_1791479315418-DOFNfHBw.jpg",
+          "cropPosition": "center 40%"
+        },
+        {
+          "id": "05-11",
+          "code": "05.11",
+          "title": "Diagonal XI",
+          "aspectRatio": "1:1",
+          "src": "/assets/color_series_05_amber_refraction_1791479354264-BNpp3lNK.jpg",
+          "cropPosition": "center 65%"
+        },
+        {
+          "id": "05-12",
+          "code": "05.12",
+          "title": "Síntesis XII",
+          "aspectRatio": "4:3",
+          "src": "/assets/color_series_02_botanical_light_1791479304527-DHa1LYJ1.jpg",
+          "cropPosition": "left center"
+        }
+      ]
+    },
+    {
+      "id": "chapter-06-closing",
+      "index": "06",
+      "kind": "closing",
+      "title": "Contacto",
+      "narrativeLine": "Comisiones y proyectos visuales.",
+      "year": "2026",
+      "location": "Ciudad de México",
+      "coverPhoto": "/assets/color_series_05_amber_refraction_1791479354264-BNpp3lNK.jpg",
+      "coverAspect": "16:9",
+      "photos": []
+    }
+  ]
+}
